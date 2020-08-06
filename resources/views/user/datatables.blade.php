@@ -37,9 +37,48 @@
             </li>
         </div>
     <div class="container">
-       
+        <div class="col-md-12 col-md-offset-1">
+            <form id="clear">
+                <div class="row">               
+					<div class="col-lg-3 mb-lg-0 mb-6">
+                        <div class="form-group" id="filter_col1" data-column="1">
+                            <label>First Name</label>
+                            <input type="text" name="First Name" class="form-control column_filter" id="col1_filter" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 mb-lg-0 mb-6">
+                        <div class="form-group" id="filter_col2" data-column="2">
+                            <label>Last Name</label>
+                            <input type="text" name="Last Name" class="form-control column_filter" id="col2_filter" placeholder="Name">
+                        </div>
+                    </div>
+				 <!--Email-->
+					<div class="col-lg-3 mb-lg-0 mb-6">
+                        <div class="form-group" id="filter_col3" data-column="3">
+                            <label>Email</label>
+                            <input type="text" name="email" class="form-control column_filter" id="col3_filter" placeholder="Email">
+                        </div>
+                    </div>
+				
+					<!--status-->
+                    <div class="col-lg-3 mb-lg-0 mb-6">
+                        <div class="form-group" id="filter_col4" data-column="4">
+                            <label>Status</label>
+                            <select name="status" class="form-control column_filter" id="col4_filter">
+							<option value="">All</option>
+									<option>Online</option>
+                                    <option>Offline</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
         <div class="row">
             <div class="col-md-12 col-md-offset-1">
+            
                 <div class="panel panel-default">
                     <div class="panel-heading">Users</div>
 
