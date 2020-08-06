@@ -22,6 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @yield('styles')
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -152,22 +153,23 @@ html
             @yield('content')
         </main>
     </div>
-    <script>
+        @yield('javascripts')
+        <script>
 		 function filterGlobal () {
-		$('#ex').DataTable().search(
+		$('#datatable').DataTable().search(
 			$('#global_filter').val(),
 		
 		).draw();
 		}
 		
 		function filterColumn ( i ) {
-			$('#ex').DataTable().column( i ).search(
+			$('#datatable').DataTable().column( i ).search(
 				$('#col'+i+'_filter').val()
 			).draw();
 		}
 		
 		$(document).ready(function() {
-			$('#ex').DataTable();
+			$('#datatable').DataTable();
 			
 			$('input.global_filter').on( 'keyup click', function () {
 				filterGlobal();
@@ -177,7 +179,6 @@ html
 				filterColumn( $(this).parents('div').attr('data-column') );
 			} );
 		} );
-
         $('select.column_filter').on('change', function () {
             filterColumn( $(this).parents('div').attr('data-column') );
         } );
